@@ -26,7 +26,7 @@ app.use(express.static('website'));
 
 function listening() {
 
-    console.log('server running');
+    console.log("server running");
     console.log(`running on localhost: ${port}`);
     
 }
