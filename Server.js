@@ -2,7 +2,8 @@
 projectData = {};
 
 // Require Express to run server and routes
-const express = require('express');
+const express = require('express')
+const bodyParser = require('body-parser')
 
 // Start up an instance of app
 const app = express();
@@ -17,7 +18,7 @@ const cors = require('cors')
 app.use(cors());
 
 // Initialize the main project folder
-app.use(express.static('website'));
+app.use(express.static('WebSite'));
 
 
 // Create a Local Server
@@ -31,4 +32,19 @@ function listening() {
     
 }
 
-// Setup Server
+//Add a GET route that returns the projectData object in server code 
+app.get("/", function(req, res){
+  res.send(projectData);
+});
+
+//add a POST route that adds incoming data to projectData
+app.post("/", function (req, res) {
+  res.send(projectData);
+});
+
+//The POST route should anticipate receiving three pieces of data from the request body: temperature, date, user response
+
+
+//Make sure your POST route is setup to add each of these values with a key to projectData.
+
+
