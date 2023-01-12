@@ -29,6 +29,3 @@ const postData = async ( url = '', data = {})=>{
   }
 
 postData('/add', {answer:42});
-//
-data.main.temp //dot notation
-data['main']['temp'] //bracket notation
