@@ -1,6 +1,7 @@
 /* Global Variables */
 // Personal API Key for OpenWeatherMap API
 const apiKey = '<your_api_key>&units=imperial';
+const url = 'https://api.openweathermap.org/data/2.5/weather?zip={zip code}&appid={API key}&units=metric';
 
 // Create a new date instance dynamically with JS
 let d = new Date();
@@ -28,3 +29,6 @@ const postData = async ( url = '', data = {})=>{
   }
 
 postData('/add', {answer:42});
+//
+data.main.temp //dot notation
+data['main']['temp'] //bracket notation
