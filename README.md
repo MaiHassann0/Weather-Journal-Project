@@ -15,7 +15,7 @@ This project requires to create an asynchronous web app that uses Web API and us
 ###### *`style.css` file*
 >Styling layout of weather journal app by applying style to font, color, background, .. etc.
 
-###### *`website/app.js` file*
+###### *`WebSite/app.js` file*
 >Acquire API credentials from OpenWeatherMap website.
 >Updating the UI dynamically using async function to reflect the dynamic values for:
 Temperature, Date & User input.
