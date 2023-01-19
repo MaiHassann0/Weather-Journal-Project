@@ -49,7 +49,7 @@ app.post("/post-data", function (req, res) {
   //-projectData now "using Dot notation"
   //--The POST route should anticipate receiving three pieces of data from the request body: temperature, date, user response
 
-  let projectData={
+  let newProjectData={
     temp: request.main.temp,
     date: request.main.date,
     content: request.main.content
