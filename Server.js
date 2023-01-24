@@ -1,5 +1,5 @@
 // Setup empty JS object to act as endpoint for all routes
-const projectData = {};
+let projectData = {};
 
 // Require Express to run server and routes
 const express = require('express')
@@ -49,7 +49,7 @@ app.post("/post-data", function (req, res) {
   //-projectData now "using Dot notation"
   //--The POST route should anticipate receiving three pieces of data from the request body: temperature, date, user response
 
-  let newProjectData={
+  let projectData = newProjectData={
     temp: request.main.temp,
     date: request.main.date,
     content: request.main.content

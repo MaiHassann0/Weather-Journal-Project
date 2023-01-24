@@ -14,7 +14,11 @@ document.getElementById('generate').addEventListener('click',func);
 function func(e){
   const zipCode = document.getElementById('zip').value;
   const userFeelings = document.getElementById('feelings').value;
-  
+
+  //Alert for improper values for zip code
+  if(document.getElementById('zip').value != zipCode)
+   alert("Invalid ZipCode")
+
   getWeatherData(url, zipCode, apiKey)
 
   .then(function(data){
@@ -66,12 +70,11 @@ const updateUI = async()=>{
   //try catch errors
   try{
     const AllDataa = await req.json();
-    document.getElementById('date').innerHTML= `Date: ${AllDataa[0].date}`;
-    document.getElementById('temp').innerHTML= `Temperature: ${AllDataa[0].temp}`;
-    document.getElementById('content').innerHTML= `Feelings: ${AllDataa[0].content}`;
+    document.getElementById('date').innerHTML= `Date: ${AllDataa.date}`;
+    document.getElementById('temp').innerHTML= `Temperature: ${AllDataa.temp}`;
+    document.getElementById('content').innerHTML= `Feelings: ${AllDataa.content}`;
 
   }catch(error){
     console.log('error', error);
   }
 }
-
